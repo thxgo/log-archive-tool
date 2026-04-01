@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+  echo "Insira um argumento válido: log-archive [diretório]"
+  exit 1
+fi
+
+dir="$1"
+
+time=$(date +%Y%m%d_%H%M%S)
+filename="logs_archive_${time}.tar.gz"
+
+echo "Compactando o diretório $dir"
+
+tar -czf "$filename" "$dir"
+
+echo "Arquivo criado: $filename"
+echo "Concluído"
