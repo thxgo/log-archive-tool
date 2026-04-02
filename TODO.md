@@ -6,6 +6,10 @@
 - [ ] Pastas com permissões elevadas não serão arquivadas pelo "tar" caso o usuário não tenha privilégio sudo
 - [ ] A	ferramenta provavelmente também não estará no PATH caso o usuário use o comando junto do sudo (sudo log-archive [diretório])
 
+## Melhorias 
+
+- [ ] Melhorar README.md, colocar saída do comando.
+
 ## Features
 
 - [ ] Integração com cron 
