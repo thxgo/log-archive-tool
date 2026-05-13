@@ -12,7 +12,7 @@ filename="logs_archive_${time}.tar.gz"
 
 echo "Compactando o diretório $dir"
 
-tar -czf "$filename" "$dir"
+tar --ignore-failed-read -czf "$filename" "$dir" 2>/dev/null
 
 echo "Arquivo criado: $filename"
 echo "Concluído"
