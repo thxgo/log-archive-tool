@@ -2,6 +2,8 @@
 
 A lightweight CLI tool that compresses directories into `.tar.gz` archives with an auto-generated timestamp.
 
+![log archive demo](assets/screenshot.png)
+
 ## Installation
 
 1. Make the script executable:
