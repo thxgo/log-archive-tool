@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -z "$1" ]; then
-  echo "Insira um argumento válido: log-archive [diretório]"
+  echo  "Please provide a valid argument: log-archive [directory]"
   exit 1
 fi
 
@@ -10,13 +10,13 @@ dir="$1"
 time=$(date +%Y%m%d_%H%M%S)
 filename="logs_archive_${time}.tar.gz"
 
-echo "Compactando o diretório $dir"
+echo "Compressing directory  $dir"
 
 stderr=$(tar --ignore-failed-read -czf "$filename" "$dir" 2>&1 >/dev/null)
 
 if [ -n "$stderr" ]; then
-  echo "Aviso: alguns arquivos foram ignorados por falta de permissão"
-fi
+  echo "Warning: some files were skipped due to permission denied"
+  fi
 
-echo "Arquivo criado: $filename"
-echo "Concluído"
+echo "Archive created: $filename"
+echo "Done"
