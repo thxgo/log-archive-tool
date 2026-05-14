@@ -1,39 +1,35 @@
 # log-archive
 
-Ferramenta simples de linha de comando para compactar diretórios em arquivos `.tar.gz` com timestamp no nome.
+A lightweight CLI tool that compresses directories into `.tar.gz` archives with an auto-generated timestamp.
 
-## Instalação
+## Installation
 
-1. Dê permissão de execução ao script:
+1. Make the script executable:
 
 ```bash
 chmod +x log-archive
 ```
 
-2. Crie o diretório de binários locais (caso não exista):
+2. Create the local bin directory if you haven't already:
 
 ```bash
 mkdir ~/.local/bin/
 ```
 
-3. Copie o script para o diretório:
+3. Move it to your local bin so you can run it from anywhere:
 
 ```bash
 cp log-archive ~/.local/bin/
 ```
 
-## Uso
-
+## Usage
 
 ```bash
-log-archive [diretório]
+log-archive [directory]
 ```
 
-### Exemplo
-
+## Example
 
 ```bash
 log-archive /var/log/
 ```
-
-
