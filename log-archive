@@ -12,7 +12,11 @@ filename="logs_archive_${time}.tar.gz"
 
 echo "Compactando o diretório $dir"
 
-tar --ignore-failed-read -czf "$filename" "$dir" 2>/dev/null
+stderr=$(tar --ignore-failed-read -czf "$filename" "$dir" 2>&1 >/dev/null)
+
+if [ -n "$stderr" ]; then
+  echo "Aviso: alguns arquivos foram ignorados por falta de permissão"
+fi
 
 echo "Arquivo criado: $filename"
 echo "Concluído"
