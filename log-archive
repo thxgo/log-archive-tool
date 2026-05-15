@@ -18,8 +18,7 @@ filename="logs_archive_${time}.tar.gz"
 
 echo -e "${CYAN}Compressing:${NC} $dir"
 
-stderr=$(tar --ignore-failed-read -czf "$filename" "$dir" 2>&1 >/dev/null)
-
+stderr=$(tar --ignore-failed-read -czf "$filename" "$dir" 2>&1 1>/dev/null | grep -v "Removing leading")
 if [ -n "$stderr" ]; then
   echo -e "${YELLOW}Warning:${NC} some files were skipped due to permission denied"
 fi
